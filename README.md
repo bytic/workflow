@@ -9,3 +9,4 @@ A workflow engine for ByTIC
 * https://github.com/brexis/laravel-workflow
 * https://github.com/zerodahero/laravel-workflow
 * https://github.com/raoul2000/yii2-workflow
+* https://github.com/yokai-php/sonata-workflow

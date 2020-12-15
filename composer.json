@@ -25,6 +25,7 @@
         "php": "^7.1",
         "bytic/inflector": "^1.0",
         "bytic/utility": "^1.0",
+        "bytic/data-objects": "^1.0",
         "symfony/workflow": "^5.0"
     },
     "require-dev": {

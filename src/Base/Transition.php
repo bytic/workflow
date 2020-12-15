@@ -18,4 +18,23 @@ class Transition extends \Symfony\Component\Workflow\Transition
     {
         return new static( $name, $froms, $tos);
     }
+
+    /**
+     * @param array $data
+     * @return Transition
+     */
+    public static function fromArray(array $data): Transition
+    {
+        if (!isset($data['name'])) {
+            throw new \InvalidArgumentException("Transition needs a name attribute defined");
+        }
+        $name = $data['name'];
+
+        foreach (['from','to'] as $key) {
+            if (!isset($data[$key])) {
+                throw new \InvalidArgumentException("Transition {$name} needs {$key} attribute defined");
+            }
+        }
+        return new static( $name, $data['from'], $data['to']);
+    }
 }
